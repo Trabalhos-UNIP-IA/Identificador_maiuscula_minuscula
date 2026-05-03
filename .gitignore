@@ -1,0 +1,15 @@
+# datasets
+data/
+
+# modelos treinados
+*.pkl
+*.h5
+*.pt
+
+# arquivos temporários
+__pycache__/
+*.pyc
+
+# ambiente
+venv/
+.env
