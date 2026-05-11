@@ -1,64 +1,198 @@
-# Identificador de Letras Maiúsculas e Minúsculas
+ 
+# ✍️ Reconhecimento de Letras com IA (EMNIST)
 
-Este projeto foi desenvolvido como atividade acadêmica da disciplina de Inteligência Artificial, com o objetivo de criar um modelo capaz de identificar letras maiúsculas e minúsculas utilizando redes neurais.
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Status](https://img.shields.io/badge/Status-Concluído-success)
+![Machine Learning](https://img.shields.io/badge/ML-EMNIST-orange)
+![OpenCV](https://img.shields.io/badge/OpenCV-Interface-green)
 
-## 🎯 Objetivo
-Desenvolver um sistema que:
-- Receba letras como entrada
-- Classifique automaticamente como maiúscula ou minúscula
-- Avalie o desempenho do modelo com métricas
+---
 
-## 🧠 Metodologia
+## 📌 Sobre o projeto
 
-O projeto foi estruturado em etapas:
+Este projeto implementa um sistema de **reconhecimento de caracteres manuscritos em tempo real**.
 
-1. Geração de dados aleatórios (letras A-Z e a-z)
-2. Pré-processamento (codificação numérica)
-3. Divisão dos dados em treino e teste
-4. Construção de uma rede neural
-5. Treinamento do modelo
-6. Avaliação com métricas (acurácia e loss)
+O usuário desenha uma letra com o mouse e um modelo de Machine Learning é capaz de:
 
-## ⚙️ Tecnologias utilizadas
+* 🔤 Identificar qual letra foi desenhada
+* 🔠 Diferenciar entre **maiúscula e minúscula**
+* 📊 Exibir o nível de confiança da previsão
 
-- Python
-- NumPy
-- Scikit-learn
-- TensorFlow / Keras
-- Jupyter Notebook
+O modelo foi treinado com o dataset **EMNIST (byclass)**, que contém **62 classes** (números + letras maiúsculas + minúsculas).
 
-## 📂 Estrutura do Projeto
+---
 
-- `Identificador_letras.ipynb` → Modelo principal
-- `Aula_30Abr26_visao_computacional_01_fundamentos.ipynb` → Base teórica
-- `Aula_30Abr26_visao_computacional_02_objetos_classificacao.ipynb` → Aplicações
-- `README.md` → Documentação
+## 🎥 Demonstração
 
-## 📊 Resultados
+![Demonstração do projeto](assets/demo1.gif)
 
-O modelo apresenta alta acurácia devido à simplicidade do problema, sendo capaz de diferenciar corretamente letras maiúsculas e minúsculas.
+---
+
+## 🧠 Tecnologias utilizadas
+
+* **Python**
+* **OpenCV**
+* **NumPy**
+* **Scikit-learn / TensorFlow**
+* **EMNIST Dataset**
+
+---
+
+## 🚀 Funcionalidades
+
+* ✔ Interface interativa para desenhar letras
+* ✔ Reconhecimento em tempo real
+* ✔ Classificação de maiúscula e minúscula
+* ✔ Exibição da confiança (%)
+* ✔ Pré-processamento consistente com o treino
+* ✔ Estrutura pronta para evolução (CNN, Web, etc.)
+
+---
+
+## 🎮 Como usar
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+```
+
+### 2. Instale as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Execute o projeto
+
+```bash
+python interface_previsao.py
+```
+
+### 4. Utilização
+
+* Desenhe uma letra com o mouse
+* Pressione **P** para prever
+* Pressione **C** para limpar a tela
+
+---
+
+## 🧪 Exemplo de saída
+
+```
+Letra: A
+Tipo: Maiúscula
+Precisão: 96.45%
+```
+
+---
+
+## 🧠 Como funciona
+
+### 🔹 1. Entrada do usuário
+
+O usuário desenha uma letra em uma tela (canvas)
+
+### 🔹 2. Pré-processamento
+
+* Redimensionamento para **28x28**
+* Normalização (**0–1**)
+* Ajuste para o padrão do modelo
+
+### 🔹 3. Predição
+
+O modelo retorna probabilidades para **62 classes**
+
+### 🔹 4. Pós-processamento
+
+* Conversão de índice → caractere
+* Verificação:
+
+  * `isupper()` → Maiúscula
+  * `islower()` → Minúscula
+
+---
+
+## ⚠️ Observações importantes
+
+O pré-processamento deve ser **idêntico ao treino**.
+
+Diferenças como:
+
+* rotação
+* escala
+* espessura do traço
+
+podem reduzir a precisão.
+
+---
+
+## 📈 Melhorias futuras
+
+* 🔥 Implementar CNN (maior precisão)
+* 📊 Mostrar Top 3 previsões
+* ✍️ Criar dataset próprio com desenhos reais
+* 🌐 Versão web (Flask ou Streamlit)
+* 📱 Transformar em aplicação mobile
+* 🎯 Melhorar centralização da letra
+
+---
+
+## 💼 Aplicações
+
+* Reconhecimento de escrita manual
+* Sistemas educacionais
+* Interfaces interativas com IA
+* Base para projetos de visão computacional
+
+---
+
+## 📁 Estrutura do projeto
+
+```
+📂 projeto/
+│
+├── 📂 assets/
+├── 📂 data/
+├── modelo.py
+├── interface_previsao.py
+├── modelo_emnist.pkl
+├── requirements.txt
+└── README.md
+```
+
 
 ## 👥 Integrantes
 
-- Nome: XXXXX | RA: XXXXX
-- Nome: XXXXX | RA: XXXXX
+* Nome: Ariane Veras | RA: R197123
+* Nome: Eduardo Mota | RA: R153FJ3
+* Nome: Sydhiney Rhurtyson | RA: G75EJI5
 
-## 🚀 Como executar
+---
 
-1. Instalar dependências:
+## 🚀 Como executar (Notebook)
+
+### 1. Instalar dependências
+
+```bash
 pip install numpy scikit-learn tensorflow
+```
 
-2. Executar:
-jupyter notebook
+### 2. Executar
 
-3. Abrir o arquivo:
-Identificador_letras.ipynb
+```bash
+interface_previsão.py
+```
 
+---
 
 ## 🔗 Repositório
 
 https://github.com/Trabalhos-UNIP-IA/Identificador_maiuscula_minuscula
 
+---
+
 ## 📌 Observações
 
-Projeto desenvolvido para fins acadêmicos, seguindo boas práticas de versionamento com Git e GitHub. :contentReference[oaicite:0]{index=0}
+Projeto desenvolvido para fins acadêmicos, seguindo boas práticas de versionamento com Git e GitHub.
