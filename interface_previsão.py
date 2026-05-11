@@ -90,7 +90,7 @@ def falar_palavra():
     mixer.music.load(caminho)
     mixer.music.play()
 
-        
+
 
 cv2.namedWindow("Desenhe uma letra")
 cv2.setMouseCallback("Desenhe uma letra", draw)
@@ -139,7 +139,7 @@ while True:
         print(f"Letra/Número: {classes[pred_idx]}")
         print(f"Tipo: {tipo_letra(pred_idx)}")
         falar_google(pred_idx)
-        print(f"Confiança: {confianca:.2f}%")
+        print(f"Precisão: {confianca:.2f}%")
         criar_palavra(pred_idx)
         print(f"Palavra formada: {''.join(palavra)}")
         # Visualização para Debug (ajuda a ver se a letra não está deformada)
