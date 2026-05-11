@@ -183,29 +183,11 @@ podem reduzir a precisão.
 
 ---
 
-## 🧑‍💻 Autor
-
-**Ariane Silva**
-
----
-
-## 👥 Integrantes
-
-* Nome: XXXXX | RA: XXXXX
-* Nome: XXXXX | RA: XXXXX
-
----
-
 ## 🚀 Como executar (Notebook)
 
-### 1. Instalar dependências
 
-```bash
-pip install numpy scikit-learn tensorflow
-```
-
-### 2. Executar
-
+### 1. Executar
+  o programa instala as depentencias automaticamente 
 ```bash
 interface_previsão.py
 ```
@@ -215,7 +197,6 @@ interface_previsão.py
 ## 🔗 Repositório
 
 https://github.com/Trabalhos-UNIP-IA/Identificador_maiuscula_minuscula
-
 ---
 
 ## 📌 Observações
