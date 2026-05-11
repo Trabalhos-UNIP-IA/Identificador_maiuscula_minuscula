@@ -2,7 +2,6 @@
 data/
 
 # modelos treinados
-*.pkl
 *.h5
 *.pt
 

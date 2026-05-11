@@ -11,7 +11,6 @@ import tempfile
 classes = list(string.digits + string.ascii_uppercase + string.ascii_lowercase)
 # engine.setProperty('rate', 150)  # Velocidade da fala
 # 🧠 Carregar o modelo (certifique-se de que o arquivo existe após o treino)
-mixer.init()  # Inicializa o mixer para áudio
 palavra=[]
 
 try:
@@ -42,9 +41,6 @@ def tipo_letra(idx):
         return "Letra Maiúscula"
     else:
         return "Letra Minúscula"
-import os
-from gtts import gTTS
-from pygame import mixer
 
 # inicializa o mixer só uma vez (fora da função, idealmente)
 mixer.init()
@@ -100,7 +96,7 @@ cv2.namedWindow("Desenhe uma letra")
 cv2.setMouseCallback("Desenhe uma letra", draw)
 
 print("Desenhe com o mouse")
-print("P = prever | C = limpar | ESC = sair | F = falar palavra | R = resetar palavra")
+print("P = prever | C = limpar | ESC = sair | F = falar palavra | R = resetar palavra | Backspace = remover última letra")
 
 while True:
     cv2.imshow("Desenhe uma letra", canvas)
@@ -163,6 +159,14 @@ while True:
             falar_palavra()
         else:
             print("Nenhuma letra foi detectada ainda!")
+            
+    if key == 8:  # Backspace
+         if palavra:
+            removida = palavra.pop()
+            print(f"Removida a última letra: {removida}")
+         else:
+            print("A palavra já está vazia.")
+        
 
     if key == ord('r'):
         palavra.clear()

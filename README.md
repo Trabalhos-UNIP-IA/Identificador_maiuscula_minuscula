@@ -83,7 +83,7 @@ python interface_previsao.py
 ```
 Letra: A
 Tipo: Maiúscula
-Confiança: 96.45%
+Precisão: 96.45%
 ```
 
 ---
@@ -162,18 +162,12 @@ podem reduzir a precisão.
 └── README.md
 ```
 
----
-
-## 🧑‍💻 Autor
-
-**Ariane Silva**
-
----
 
 ## 👥 Integrantes
 
-* Nome: XXXXX | RA: XXXXX
-* Nome: XXXXX | RA: XXXXX
+* Nome: Ariane Veras | RA: R197123
+* Nome: Eduardo Mota | RA: R153FJ3
+* Nome: Sydhiney Rhurtyson | RA: G75EJI5
 
 ---
 
