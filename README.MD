@@ -176,22 +176,6 @@ podem reduzir a precisão.
 
 ---
 
-## 🚀 Como executar (Notebook)
-
-### 1. Instalar dependências
-
-```bash
-pip install numpy scikit-learn tensorflow
-```
-
-### 2. Executar
-
-```bash
-interface_previsão.py
-```
-
----
-
 ## 🔗 Repositório
 
 https://github.com/Trabalhos-UNIP-IA/Identificador_maiuscula_minuscula
