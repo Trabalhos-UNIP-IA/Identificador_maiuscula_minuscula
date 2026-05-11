@@ -16,7 +16,7 @@ O usuário desenha uma letra com o mouse e um modelo de Machine Learning é capa
 
 * 🔤 Identificar qual letra foi desenhada
 * 🔠 Diferenciar entre **maiúscula e minúscula**
-* 📊 Exibir o nível de confiança da previsão
+* 📊 Exibir o nível de precisão da previsão
 
 O modelo foi treinado com o dataset **EMNIST (byclass)**, que contém **62 classes** (números + letras maiúsculas + minúsculas).
 
