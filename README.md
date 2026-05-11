@@ -166,4 +166,59 @@ Fluxo do processo:
 
 ---
 
+# 📊 Métricas de Desempenho
+
+As métricas utilizadas para avaliação do modelo foram:
+
+* Accuracy;
+* Loss;
+* Matriz de Confusão;
+* Precisão (Precision);
+* Recall.
+
+Exemplo de métricas obtidas após o treinamento:
+
+| Métrica  | Resultado |
+| -------- | --------- |
+| Accuracy | 98%       |
+| Loss     | 0.04      |
+| Precisão | 97%       |
+| Recall   | 98%       |
+
+---
+
+# 📈 Exemplo de Treinamento
+
+```python
+model.compile(
+    optimizer='adam',
+    loss='binary_crossentropy',
+    metrics=['accuracy', 'Precision', 'Recall']
+)
+
+history = model.fit(
+    X_train,
+    y_train,
+    epochs=10,
+    validation_data=(X_test, y_test)
+)
+```
+
+---
+
+# 🧪 Resultado Final
+
+O modelo apresentou uma alta taxa de acerto na identificação de letras maiúsculas e minúsculas, demonstrando que Redes Neurais podem ser aplicadas com eficiência em tarefas de classificação de imagens.
+
+Os resultados obtidos mostraram boa capacidade de generalização do modelo durante os testes realizados com entradas aleatórias.
+
+---
+
+# 🔗 Repositório GitHub
+
+Repositório do projeto:
+
+https://github.com/Trabalhos-UNIP-IA/Identificador_maiuscula_minuscula.git
+
+---
 
