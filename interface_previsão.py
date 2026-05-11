@@ -18,7 +18,6 @@ import numpy as np
 import string
 import joblib # Recomendado para carregar o modelo treinado
 from gtts import gTTS
-import os
 from pygame import mixer
 import tempfile
 
@@ -63,17 +62,7 @@ from pygame import mixer
 
 # inicializa o mixer só uma vez (fora da função, idealmente)
 mixer.init()
-
-
-def falar_google(idx):
-    
-    if idx < 10:
-        texto = f"Você desenhou o número {classes[idx]}"
-    elif idx < 36:
-        texto = f"Você desenhou a letra {classes[idx]}  maiúscula"
-    else:
-        texto = f"Você desenhou a letra {classes[idx]} minúscula"
-
+def criar_audio_google(texto):
     # cria arquivo temporário
     with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as fp:
         caminho = fp.name
@@ -85,6 +74,18 @@ def falar_google(idx):
     # toca
     mixer.music.load(caminho)
     mixer.music.play()
+
+def falar_google(idx):
+    
+    if idx < 10:
+        texto = f"Você desenhou o número {classes[idx]}"
+    elif idx < 36:
+        texto = f"Você desenhou a letra {classes[idx]}  maiúscula"
+    else:
+        texto = f"Você desenhou a letra {classes[idx]} minúscula"
+
+    # cria arquivo temporário
+    criar_audio_google(texto)
 
 def criar_palavra(idx):
     if idx < 10:
@@ -99,15 +100,8 @@ def falar_palavra():
 
     texto = f"A palavra formada é: {''.join(palavra)}"
     print(texto)
+    criar_audio_google(texto)
 
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as fp:
-        caminho = fp.name
-
-    tts = gTTS(text=texto, lang='pt-br')
-    tts.save(caminho)
-
-    mixer.music.load(caminho)
-    mixer.music.play()
 
         
 
@@ -155,7 +149,8 @@ while True:
 
         confianca = probabilidades[pred_idx] * 100
         if confianca < 80:  # Apenas confirma a predição se a confiança for alta o suficiente
-                print(f"Confiança baixa ({confianca:.2f}%), tente desenhar novamente.")
+                print(f"Falha ao reconhecer , só foi possivel reconhecer ({confianca:.2f}%), tente desenhar novamente.")
+                criar_audio_google(f"Falha ao reconhecer , só foi possivel reconhecer ({confianca:.2f}%), tente desenhar novamente.")
         else:
             print("-" * 30)
             print(f"Letra/Número: {classes[pred_idx]}")

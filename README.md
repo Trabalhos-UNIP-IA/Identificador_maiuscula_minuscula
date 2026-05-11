@@ -1,4 +1,20 @@
  
+## 👥 Integrantes
+
+| Nome             | RA      |
+| ---------------- | ------- |
+| Sydhiney Silva   | G75EJI5 |
+| Eduardo Theodoro | R153FJ3 |
+| Ariane Veras     | R197123 |
+
+
+---
+
+**Disciplina:** Inteligência Artificial — J903
+**Curso:** Ciência da Computação — 2026
+
+---
+
 # ✍️ Reconhecimento de Letras com IA (EMNIST)
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
