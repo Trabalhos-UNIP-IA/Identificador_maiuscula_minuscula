@@ -133,13 +133,13 @@ while True:
         # Mas para ver a porcentagem de confiança, usamos .predict_proba()
         probabilidades = model.predict_proba(img_input)[0]
         pred_idx = np.argmax(probabilidades)
-        confianca = probabilidades[pred_idx] * 100
+        precisao = probabilidades[pred_idx] * 100
 
         print("-" * 30)
         print(f"Letra/Número: {classes[pred_idx]}")
         print(f"Tipo: {tipo_letra(pred_idx)}")
         falar_google(pred_idx)
-        print(f"Precisão: {confianca:.2f}%")
+        print(f"Precisão: {precisao:.2f}%")
         criar_palavra(pred_idx)
         print(f"Palavra formada: {''.join(palavra)}")
         # Visualização para Debug (ajuda a ver se a letra não está deformada)
