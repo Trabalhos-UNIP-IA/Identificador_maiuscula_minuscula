@@ -13,4 +13,3 @@ __pycache__/
 # ambiente
 venv/
 .env
-README.md
