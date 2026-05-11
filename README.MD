@@ -20,6 +20,7 @@ O usuário desenha uma letra com o mouse e um modelo de Machine Learning é capa
 
 O modelo foi treinado com o dataset **EMNIST (byclass)**, que contém **62 classes** (números + letras maiúsculas + minúsculas).
 
+
 ---
 
 ## 🎥 Demonstração
@@ -43,7 +44,7 @@ O modelo foi treinado com o dataset **EMNIST (byclass)**, que contém **62 class
 * ✔ Interface interativa para desenhar letras
 * ✔ Reconhecimento em tempo real
 * ✔ Classificação de maiúscula e minúscula
-* ✔ Exibição da confiança (%)
+* ✔ Exibição da precisão (%)
 * ✔ Pré-processamento consistente com o treino
 * ✔ Estrutura pronta para evolução (CNN, Web, etc.)
 
@@ -66,7 +67,8 @@ pip install -r requirements.txt
 ### 3. Execute o projeto
 
 ```bash
-python interface_previsao.py
+primeiro: python modelo.py
+depois: python interface_previsao.py
 ```
 
 ### 4. CONTROLES
