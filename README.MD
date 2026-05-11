@@ -69,11 +69,17 @@ pip install -r requirements.txt
 python interface_previsao.py
 ```
 
-### 4. Utilização
+### 4. CONTROLES
 
 * Desenhe uma letra com o mouse
 * Pressione **P** para prever
 * Pressione **C** para limpar a tela
+* Pressione **ESC** para sair
+* Pressione **F** para falar palavra
+* Pressione **R** para resetar palavra
+* Pressione **Backspace** para remover última letra
+
+
 
 ---
 
