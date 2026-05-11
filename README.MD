@@ -54,8 +54,7 @@ O modelo foi treinado com o dataset **EMNIST (byclass)**, que contém **62 class
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/Trabalhos-UNIP-IA/Identificador_maiuscula_minuscula.git
 ```
 
 ### 2. Instale as dependências
